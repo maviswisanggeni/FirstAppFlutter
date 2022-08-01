@@ -39,7 +39,7 @@ class _FormRegistrationState extends State<FormRegistration> {
                 height: 10,
               ),
               TextField(
-                controller: ctrUsername,
+                controller: ctrPassword,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Password",
