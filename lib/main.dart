@@ -1,4 +1,7 @@
 import 'package:cobalatihan/FormRegistration.dart';
+import 'package:cobalatihan/ListFootballPL.dart';
+import 'package:cobalatihan/SplashScreen.dart';
+import 'package:cobalatihan/TabbarExample.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -25,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const FormRegistration(),
+      home: const SplashScreen(),
     );
   }
 }
