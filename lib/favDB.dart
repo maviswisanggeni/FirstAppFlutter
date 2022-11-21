@@ -84,25 +84,6 @@ class FavDatabase {
     }
   }
 
-  update(FavoriteModel karyawanModel) async {
-    final db = await instance.database;
-    try {
-      db.rawUpdate('''
-    UPDATE ${tableFavorite} 
-    SET ${Favorite.name} = ?, ${Favorite.image} = ?, ${Favorite.name} = ?, ${Favorite.julukan} = ?, ${Favorite.since} = ?, 
-    WHERE ${Favorite.id} = ?
-    ''', [
-        karyawanModel.name,
-        karyawanModel.image,
-        karyawanModel.julukan,
-        karyawanModel.since,
-        karyawanModel.id
-      ]);
-    } catch (e) {
-      print('error: ' + e.toString());
-    }
-  }
-
   Future close() async {
     final db = await instance.database;
     db.close();

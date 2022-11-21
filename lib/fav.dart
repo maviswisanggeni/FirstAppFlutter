@@ -80,7 +80,7 @@ class _favPageState extends State<favPage> {
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Container(
-          padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+          padding: EdgeInsets.only(left: 10, right: 10),
           child: isLoading
               ? Center(
             child: CircularProgressIndicator(),
@@ -94,24 +94,23 @@ class _favPageState extends State<favPage> {
             itemBuilder: (c, index) {
               final item = dataListFavorite[index];
               return Container(
-                margin: EdgeInsets.only(top: 10),
                 padding: EdgeInsets.all(30),
-                width: 315,
-                height: 110,
+                height: 120,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.04),
-                        offset: Offset(0.0, 4.0), //(x,y)
-                        blurRadius: 4.0,
-                      ),
-                    ]),
+                  borderRadius: BorderRadius.circular(20),
+                  gradient: LinearGradient(
+                    begin: Alignment.centerRight,
+                    end: Alignment.centerLeft,
+                    colors: [
+                      Colors.blueAccent.withAlpha(15),
+                      Colors.blueAccent.withAlpha(15),
+                    ],
+                  ),
+                ),
                 child: Row(
                   children: <Widget>[
                     Container(
-                      width: 45,
+                      width: 50,
                       height: 50,
                       margin: EdgeInsets.only(right: 30),
                       child: FadeInImage.assetNetwork(
@@ -124,8 +123,8 @@ class _favPageState extends State<favPage> {
                         Text(
                           item.name,
                           style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800),
                         ),
                         Container(
                           margin: EdgeInsets.only(top: 2),
